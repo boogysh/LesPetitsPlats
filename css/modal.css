@@ -42,4 +42,27 @@ position: absolute;
   top: 21px;
   right: 21px;
 }
-
+/* responsive */
+@media all and (max-width: 539px) {
+  .closeModalBtn {
+    top: 20px;
+    right: 20px;
+  }
+  .modalTime {
+    top: 21px;
+    right: 60px;
+  }
+}
+@media all and (max-width: 439px) {
+  .modalWrapper {
+    width: 100%;
+    border-radius: 0px;
+    margin: 10% auto;
+  }
+  .closeModalImg {
+    border-radius: 0;
+  }
+  .modalImg {
+    border-radius: 0;
+  }
+}

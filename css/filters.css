@@ -236,3 +236,165 @@
   transform: scale(1.1);
 }
 
+/* RESPONSIVE */
+@media all and (max-width: 1279px) {
+  .filtersWrapper {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .tags {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .filter {
+    margin-right: 46px;
+  }
+  #ingredientsWrapper {
+    left: 74px;
+  }
+  #appliancesWrapper {
+    left: 315px;
+  }
+  #ustensilsWrapper {
+    left: 556px;
+  }
+}
+@media all and (max-width: 1023px) {
+  .filtersWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .tags {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .filter {
+    margin-right: 25px;
+    width: 170px;
+    padding: 15px;
+  }
+  #ingredientsWrapper {
+    left: 30px;
+  }
+  #appliancesWrapper {
+    left: 225px;
+  }
+  #ustensilsWrapper {
+    left: 420px;
+  }
+  .searchFilterWrapper {
+    width: 150px;
+  }
+  .arrowBottom {
+    margin-left: 50px;
+  }
+  .keyFilter {
+    width: 180px;
+    height: 34px;
+  }
+  .keyFilterBtn {
+    width: 145px;
+  }
+ 
+}
+@media all and (max-width: 767px) {
+  .mobileFiltersTagsWrapper {
+    flex-direction: row;
+  }
+
+  .filtersWrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .filter {
+    position: unset;
+    margin-right: 0;
+    margin-top: 15px;
+  }
+  .filter:first-of-type {
+    margin-top: 20px;
+  }
+  .tagsWrapper {
+    height: auto;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+  .tags {
+    display: block;
+    height: 100%;
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 11px;
+    padding: 15px;
+    align-items: flex-start;
+  }
+  .tag {
+    margin-bottom: 15px;
+    margin-top: 0;
+    width: 100%;
+  }
+  .tag:last-of-type {
+    margin-bottom: 0;
+  }
+  .tagsTitle {
+    display: block;
+  }
+}
+@media all and (max-width: 539px) {
+  .filtersWrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .tagsWrapper {
+    margin-right: 15px;
+  }
+  .tags {
+    margin-right: 0px;
+  }
+  .tagsTitle{
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 439px) {
+  .mobileFiltersTagsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filtersWrapper{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .filter{
+    width: 100%;
+  }
+  .filterTitle{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .filterContent{
+    width: 100%;
+    padding: 0;
+  }
+  .searchFilterWrapper{
+    width: 100%;
+  }
+  .keyFilter{
+    padding-left: 0;
+  }
+  /* -------- */
+  .tagsWrapper {
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+  }
+  .tags {
+    min-height: 0px;
+    background-color: #ededed;
+    padding: 0 20px 15px;
+  }
+  .tagsTitle {
+    top: 25%;
+  }
+}

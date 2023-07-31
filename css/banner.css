@@ -227,4 +227,135 @@ h1 {
   right: 100px;
   z-index: 99;
 }
+/* ------Responsive------------- */
 
+@media all and (max-width: 1279px) {
+  h1 {
+    font-size: 36px;
+  }
+  .searchBar {
+    width: 100%;
+    height: 72px;
+  }
+  .searchIcons {
+    margin-left: auto;
+  }
+  .qtyRecipes {
+    right: 70px;
+  }
+}
+@media all and (max-width: 1023px) {
+  .banner {
+    height: 560px;
+  }
+  h1 {
+    font-size: 32px;
+    margin-top: 100px;
+  }
+  .searchBar {
+    height: 60px;
+  }
+  .logo {
+    width: 190px;
+    height: auto;
+  }
+  .qtyRecipes {
+    right: 30px;
+    bottom: -60px;
+  }
+}
+@media all and (max-width: 767px) {
+  .searchBar {
+    box-shadow: 0 0 5px black;
+  }
+  .keyWords {
+    /* border: 2px solid red; */
+    z-index: 99;
+  }
+  .banner {
+    height: 440px;
+  }
+  .logo {
+    width: 170px;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+  .qtyRecipes {
+    bottom: 20px;
+    color: var(--yellow);
+    z-index: 10;
+  }
+  h1 {
+    font-size: 24px;
+    margin-top: 60px;
+    font-weight: 400;
+  }
+  .searchResponse{
+    font-size: 20px;
+    margin-top: 40px;
+  }  
+}
+@media all and (max-width: 539px) {
+  .banner {
+    height: 400px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 60px;
+  }
+  .logo {
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .searchWrapper {
+    width: 90%;
+  }
+  .searchMain {
+    padding-left: 15px;
+  }
+  .mainKey {
+    padding-left: 15px;
+  }
+  .searchResponse{
+    font-size: 18px;
+    margin-top: 40px;
+  }  
+}
+@media all and (max-width: 439px) {
+  h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .brH1 {
+    display: none;
+  }
+  .qtyRecipes {
+    font-size: 16px;
+  }
+  .searchBar {
+    height: 50px;
+  }
+  .searchBtn {
+    margin-right: 0;
+    margin-left: 15px;
+    width: 45px;
+  }
+  .searchImg,
+  .searchImgYellow {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+  }
+  .searchResponse{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+  }  
+  .viewList{
+    font-size: 16px;
+  }
+}
