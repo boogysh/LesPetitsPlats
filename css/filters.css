@@ -1,0 +1,238 @@
+.mobileWrapper {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.mobileFiltersTagsWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ededed;
+  /* height: 100%; */
+  height: auto;
+}
+.mobileRecipesWrapper {
+  display: flex;
+}
+.filtersWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #ededed;
+  padding-left: 104px;
+  padding-right: 102px;
+}
+
+.filter {
+  position: absolute;
+  border-radius: 11px;
+  width: 195px;
+  height: auto;
+  padding: 17px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 66px;
+  margin-top: 20px;
+  z-index: 10;
+}
+#ingredientsWrapper {
+  left: 104px;
+  height: auto;
+}
+#appliancesWrapper {
+  left: 365px;
+}
+#ustensilsWrapper {
+  left: 626px;
+}
+.filterTitle {
+  display: flex;
+  align-items: center;
+}
+.filterText {
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+.arrowBottom {
+  width: 13px;
+  height: 7px;
+  margin-left: 63px;
+}
+.rotate {
+  rotate: 180deg;
+}
+
+/* ----------- */
+.filterContent {
+  display: none;
+  padding: 0 16px;
+}
+.open {
+  display: block;
+}
+
+.searchFilterWrapper {
+  /* width: 100%; */
+  width: 163px;
+  height: 36px;
+  border: 1px solid var(--gray);
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  border-radius: 2px;
+  /* margin-top: 14px; */
+  margin: 14px auto 0 auto;
+}
+/* --------- */
+.filterInput {
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+  color: var(--gray);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  outline: none;
+  border: none;
+  background-color: white !important;
+}
+.filterInput:focus {
+  background-color: white !important;
+}
+.cleanSearchIngredients {
+  width: 9px;
+  height: 9px;
+  margin: 0 5px;
+  margin-right: 5px;
+  display: block;
+}
+.cleanSearchFilterBtn {
+  display: none;
+}
+.cleanSearchFilterBtn.show {
+  display: block;
+}
+.searchIconFilter {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+}
+.cleanSearchIngredients:hover,
+.searchIconFilter:hover {
+  transform: scale(1.1);
+}
+/* ---------- */
+.keyListFilter {
+  width: 100%;
+  height: auto;
+}
+.keyFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 13px; */
+  height: 37px;
+  width: 195px;
+  padding-left: 16px;
+  padding-right: 16px;
+  z-index: -1;
+}
+.keyFilter:hover {
+  background-color: var(--yellow);
+}
+
+.keyFilter:first-of-type {
+  margin-top: 15px;
+}
+.keyFilter:last-of-type {
+  margin-bottom: 0;
+}
+.keyFilterBtn {
+  color: var(--black);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 50;
+  width: 145px;
+  height: 100%;
+  text-align: left;
+}
+.keyFilterBtn:hover {
+  font-weight: 500;
+}
+.closeKeyWordFilterImg {
+  width: 17px;
+  height: 17px;
+  margin-left: auto;
+  display: none;
+}
+.keyFilter:hover .closeKeyWordFilterImg {
+  display: block;
+}
+.tagsWrapper {
+  position: relative;
+  width: 100%;
+}
+.tags {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ededed;
+  padding-top: 90px;
+  padding-left: 104px;
+  padding-right: 104px;
+}
+.tagsTitle {
+  font-size: 18px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  font-family: "Manrope", sans-serif;
+  margin: auto 0;
+  display: none;
+  position: absolute;
+  top: 40%;
+  padding: 0 30px;
+}
+.tag {
+  height: 53px;
+  width: 203px;
+  border-radius: 10px;
+  background-color: var(--yellow);
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.tagDescription {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+}
+.deleteTagImg {
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  object-fit: cover;
+}
+.deleteTagImg:hover {
+  transform: scale(1.1);
+}
+

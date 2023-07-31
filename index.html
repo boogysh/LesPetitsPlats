@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/banner.css" />
+    <link rel="stylesheet" href="/css/filters.css" />
+    <link rel="stylesheet" href="/css/recipes.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="banner">
+      <img class="logo" src="/assets/Logo.png" alt="logo" />
+      <h1>
+        Chercher parmi plus de 1500 recettes du <br class="brH1" />
+        quotidien, simples et délicieuses
+      </h1>
+      <!--  SEARCH -->
+      <div class="searchWrapper" id="searchWrapper">
+        <div class="searchBar">
+          <input
+            placeholder="Rechercher une recette, un ingredient, ..."
+            class="searchMain"
+            id="searchMain"
+            type="text"
+            autocomplete="off"
+          />
+          <div class="searchIcons">
+            <img
+              class="cleanSearchMain xBtn"
+              src="/assets/close.png"
+              alt="clean input"
+            />
+            <button class="searchBtn">
+              <!-- serch Button -->
+              <svg
+                class="searchImg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 51 52"
+                fill="none"
+              >
+                <rect width="51" height="52" rx="10" fill="#1B1B1B" />
+                <circle cx="22" cy="22" r="9.5" stroke="white" />
+                <line
+                  x1="30.3536"
+                  y1="30.6464"
+                  x2="39.3536"
+                  y2="39.6464"
+                  stroke="white"
+                />
+                <title>search button</title>
+              </svg>
+              <!-- yellow serch Button -->
+              <svg
+                class="searchImgYellow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 51 52"
+                fill="none"
+              >
+                <rect width="51" height="52" rx="10" fill="#FFD15B" />
+                <circle cx="22" cy="22" r="9.5" stroke="black" />
+                <line
+                  x1="30.3536"
+                  y1="30.6464"
+                  x2="39.3536"
+                  y2="39.6464"
+                  stroke="black"
+                />
+                <title>search button on hover</title>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul class="keyWords">
+          <!-- keys Main -->
+          <!-- keys Main -->
+          <!-- keys Main -->
+        </ul>
+      </div>
+      <!-- QTY recipes -->
+      <span class="qtyRecipes">0 recettes</span>
+    </header>
+    <div class="mobileFiltersTagsWrapper">
+      <aside class="filtersWrapper">
+        <!-- ingrédients -->
+        <div class="filter" id="ingredientsWrapper">
+          <button class="filterTitle" id="toggleIngredients">
+            <span class="filterText">Ingrédients</span>
+            <img
+              class="arrowBottom"
+              id="ingredientsArrow"
+              src="/assets/arrowBottom.png"
+              alt="arrow bottom"
+            />
+          </button>
+          <div class="filterContent" id="ingredientsContent">
+            <div class="searchFilterWrapper">
+              <input
+                class="filterInput"
+                id="ingredientsInput"
+                type="text"
+                autocomplete="off"
+              />
+              <button
+                class="cleanSearchFilterBtn cleanSearchIngredientsBtn xBtn"
+              >
+                <img
+                  class="cleanSearchIngredients"
+                  src="/assets/close.png"
+                  alt="close icon"
+                />
+              </button>
+              <button class="searchFilterBtn searchIngredientsBtn">
+                <img
+                  class="searchIconFilter"
+                  src="/assets/searchBlack.png"
+                  alt="search icon"
+                />
+              </button>
+            </div>
+            <ul id="keyListIngredients" class="keyListFilter">
+              <!-- ingredients_Keys -->
+              <!-- ingredients_Keys -->
+              <!-- ingredients_Keys -->
+            </ul>
+          </div>
+        </div>
+        <!-- appliances -->
+        <div class="filter" id="appliancesWrapper">
+          <!-- <button class="filterTitle" id="toggleIngredients"> -->
+          <button class="filterTitle" id="toggleAppliances">
+            <span class="filterText">Appareils</span>
+            <img
+              class="arrowBottom"
+              id="appliancesArrow"
+              src="/assets/arrowBottom.png"
+              alt="arrow bottom"
+            />
+          </button>
+          <div class="filterContent" id="appliancesContent">
+            <div class="searchFilterWrapper">
+              <input
+                class="filterInput"
+                id="appliancesInput"
+                type="text"
+                autocomplete="off"
+              />
+              <button class="cleanSearchFilterBtn cleanAppliancesValueBtn xBtn">
+                <img
+                  class="cleanSearchIngredients"
+                  src="/assets/close.png"
+                  alt="close icon"
+                />
+              </button>
+              <button class="searchFilterBtn searchAppliancesBtn">
+                <img
+                  class="searchIconFilter"
+                  src="/assets/searchBlack.png"
+                  alt="search icon"
+                />
+              </button>
+            </div>
+            <ul id="appliancesKeysWrapper" class="keyListFilter">
+              <!-- appliances_Keys -->
+              <!-- appliances_Keys -->
+              <!-- appliances_Keys -->
+            </ul>
+          </div>
+        </div>
+        <!-- ustensils -->
+        <div class="filter" id="ustensilsWrapper">
+          <button class="filterTitle" id="toggleUstensils">
+            <span class="filterText">Ustensiles</span>
+            <img
+              class="arrowBottom"
+              id="ustensilsArrow"
+              src="/assets/arrowBottom.png"
+              alt="arrow bottom"
+            />
+          </button>
+          <div class="filterContent" id="ustensilsContent">
+            <div class="searchFilterWrapper">
+              <input
+                class="filterInput"
+                id="ustensilsInput"
+                type="text"
+                autocomplete="off"
+              />
+              <button class="cleanSearchFilterBtn cleanUstensilsValueBtn xBtn">
+                <img
+                  class="cleanSearchIngredients"
+                  src="/assets/close.png"
+                  alt="close icon"
+                />
+              </button>
+              <button class="searchFilterBtn searchUstensilsBtn">
+                <img
+                  class="searchIconFilter"
+                  src="/assets/searchBlack.png"
+                  alt="search icon"
+                />
+              </button>
+            </div>
+            <ul id="ustensilsKeysWrapper" class="keyListFilter">
+              <!-- ustensils_Keys -->
+              <!-- ustensils_Keys -->
+              <!-- ustensils_Keys -->
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!---------  tags  -------->
+      <div class="tagsWrapper">
+        <h2 class="tagsTitle" id="tagsTitle">La liste des tags est vide</h2>
+        <div class="tags"></div>
+      </div>
+    </div>
+    <!-------- recipes -------->
+    <div class="recipesWrapper"></div>
+    <!-- ------one recipe------------- -->
+    <div class="bgModal">
+      <div class="modalWrapper">
+        <!-- recipe-Modal -->
+      </div>
+    </div>
+    <!--  -->
+    <script type="module" src="/js/data/api.js"></script>
+    <script type="module" src="/js/functions/keysFunctions.js"></script>
+    <script type="module" src="/js/functions/searchFunctions.js"></script>
+    <script type="module" src="/js/functions/index.js"></script>
+    <script type="module" src="/js/utils/utils.js"></script>
+    <script src="/js/utils/test.js"></script>
+  </body>
+</html>
