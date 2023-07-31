@@ -1,4 +1,11 @@
-
+import { deleteTag, showTags } from "../functions/keysFunctions.js";
+import {
+  createSearchResult,
+  getSearchResult,
+  searchMessage,
+} from "../functions/searchFunctions.js";
+import api from "../data/api.js";
+import { args,showHideTagsTitle } from "../utils/utils.js";
 export default class Tag {
   constructor(tag, index) {
     this.tag = tag;
@@ -10,7 +17,24 @@ export default class Tag {
     const deleteTagBtn = document.createElement("button");
     const deleteIcon = document.createElement("img");
     //
-    
+    //-------------------EVENTS--------------------
+    //delete tag
+    deleteTagBtn.addEventListener("click", () => {
+      const { val } = args("main");
+      const allRecipes = api();
+      deleteTag("tags", this.index);
+      const tagList = showTags();
+      showHideTagsTitle();
+
+      if (tagList.length === 0 && val.length === 0) {
+        createSearchResult(allRecipes);
+      } else {
+        const result = getSearchResult();
+        console.log("result", result);
+        const message = searchMessage(tagList); //if no result
+        createSearchResult(result, message);
+      }
+    });
     //-------ADD PROPERTYS & CLASSES -------------
     wrapper.classList.add("tag");
     //text

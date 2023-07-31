@@ -1,3 +1,6 @@
+import { deleteKeyWord, showKeyWordList } from "../functions/keysFunctions.js";
+import { updateSearchValue, searchAxe } from "../functions/searchFunctions.js";
+
 export default class MainKeyWord {
   constructor(type, key, index) {
     this.type = type;
@@ -11,7 +14,17 @@ export default class MainKeyWord {
     const deleteKeyBtn = document.createElement("button");
     const closeIcon = document.createElement("img");
     //
-    
+    //-------------------EVENTS--------------------
+    //show search result on keyWord click
+    searchKeyBtn.addEventListener("click", () => {
+      updateSearchValue(this.type, this.index);
+      searchAxe("main");
+    });
+    //delete keyWord
+    closeIcon.addEventListener("click", () => {
+      deleteKeyWord(this.type, this.index);
+      showKeyWordList(this.type);
+    });
     //-------ADD PROPERTYS & CLASSES -------------
     //wrapper
     wrapper.classList.add("mainKey");

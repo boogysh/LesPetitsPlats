@@ -1,3 +1,6 @@
+import { deleteKeyWord, showKeyWordList } from "../functions/keysFunctions.js";
+import { updateSearchValue } from "../functions/searchFunctions.js";
+import { searchAxe } from "../functions/searchFunctions.js";
 export default class FilterKeyWord {
   constructor(type, key, index) {
     this.type = type;
@@ -10,6 +13,19 @@ export default class FilterKeyWord {
     const deleteKeyBtn = document.createElement("button");
     const deleteIcon = document.createElement("img");
     //
+    //-------------------EVENTS--------------------
+    //show search result on keyWord click
+    keyBtn.addEventListener("click", () => {
+      updateSearchValue(this.type, this.index);
+      this.type === "ingredients" && searchAxe("ingredients");
+      this.type === "appliances" && searchAxe("appliances");
+      this.type === "ustensils" && searchAxe("ustensils");
+    });
+    //delete keyWord
+    deleteKeyBtn.addEventListener("click", () => {
+      deleteKeyWord(this.type, this.index);
+      showKeyWordList(this.type);
+    });
     //-------ADD PROPERTYS & CLASSES -------------
     wrapper.classList.add("keyFilter");
     //text

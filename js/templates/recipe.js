@@ -1,3 +1,4 @@
+import { truncateStr, showModal, closeModal } from "../utils/utils.js";
 //
 export default class Recipe {
   constructor(recipe) {
@@ -36,7 +37,10 @@ export default class Recipe {
     const link = document.createElement("a");
     link.innerHTML = " voir plus...";
     link.classList.add("more");
-    
+    //events
+    link.addEventListener("click", () => {
+      showModal(this.createRecipeModal());
+    });
     //-------ADD PROPERTYS & CLASSES -------------
     wrapper.classList.add("recipeWrapper");
     recipeTime.classList.add("recipeTime");
@@ -46,11 +50,11 @@ export default class Recipe {
     recipeImg.alt = `${this.recipe.name}`;
     recipeDescriptionWrapper.classList.add("recipeDescriptionWrapper");
     recipeTitle.classList.add("recipeTitle");
-    recipeTitle.innerHTML = `${this.recipe.name}`;
+    recipeTitle.innerHTML = `${truncateStr(this.recipe.name, 42)}`;
     recipeH4.classList.add("recipe-h4");
     recipeH4.innerHTML = "RECETTE";
     description.classList.add("description");
-    description.innerHTML = `${this.recipe.description}`;
+    description.innerHTML = `${truncateStr(this.recipe.description, 230)}`;
     recipeH4_2.classList.add("recipe-h4");
     recipeH4_2.innerHTML = "Ingredients";
     ingredients.classList.add("ingredients");
@@ -83,7 +87,8 @@ export default class Recipe {
     const description = document.createElement("p");
     const recipeH4_2 = document.createElement("h4");
     const ingredients = document.createElement("ul");
-    
+    //events;
+    close.addEventListener("click", closeModal);
     //-------ADD PROPERTYS & CLASSES -------------
     wrapper.classList.add("modalWrapper");
     close.classList.add("closeModalBtn");
