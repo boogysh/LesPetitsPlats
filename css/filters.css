@@ -65,7 +65,7 @@
   margin-left: 63px;
 }
 .rotate {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 /* ----------- */
