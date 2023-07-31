@@ -15,6 +15,7 @@ main();
 window.onload = () => {
   const recipes = api();
   createSearchResult(recipes, "");
+  localStorage.removeItem("tags");
 };
 //
 //--------MAIN AXE-----------
