@@ -27,20 +27,37 @@ function searchValueArray(input) {
 function resetSearchValue(input) {
   return (input.value = "");
 }
+//--------------union---------------
+function union(...arrays) {
+  return Array.from(new Set([...arrays].flat()));
+}
 //----------search one sring in the defined area--------
 function searchOneStr(type, recipes, str) {
   let result;
   str = str.toLowerCase();
   //
-  type === "main" &&
-    (result = recipes.filter(
-      (recipe) =>
-        recipe.name.toLowerCase().includes(str) ||
-        recipe.description.toLowerCase().includes(str) ||
-        recipe.ingredients.some((el) =>
-          el.ingredient.toLowerCase().includes(str)
-        )
-    ));
+  const recipeNameArr = [];
+  const recipeDescriptionArr = [];
+  const recipeIngredientsArr = [];
+  const allArrays = [];
+  //
+  str = str.toLowerCase();
+  if (type === "main") {
+    for (let i = 0; i < recipes?.length; i++) {
+      if (recipes[i].name.toLowerCase().includes(str)) {
+        recipeNameArr.push(recipes[i]);
+      } else if (recipes[i].description.toLowerCase().includes(str)) {
+        recipeDescriptionArr.push(recipes[i]);
+      }
+      for (let j = 0; j < recipes[i].ingredients?.length; j++) {
+        if (recipes[i].ingredients[j].ingredient.toLowerCase().includes(str)) {
+          recipeIngredientsArr.push(recipes[i]);
+        }
+      }
+    }
+    allArrays.push(recipeNameArr, recipeDescriptionArr, recipeIngredientsArr);
+    result = union(...allArrays);
+  }
   type === "ingredients" &&
     (result = recipes.filter((recipe) =>
       recipe.ingredients.some((el) => el.ingredient.toLowerCase().includes(str))
@@ -57,25 +74,25 @@ function searchOneStr(type, recipes, str) {
 }
 //---------------search expression--------------------
 function search(type) {
-  const searchMainInputValue = searchValueArray(searchInput);
-  const recipes = api(); //all recipes
-  let filteredRecipes = recipes;
+  const splittedStr = searchValueArray(searchInput);
+  // "crème coco" => ["crème","coco"]
+  const recipesData = api(); //all recipes
+  let filteredRecipes = recipesData;
   //
   //--------------- main search------------------------
   if (type === "main") {
-    if (searchMainInputValue.length > 0) {
-      for (let str of searchMainInputValue) {
-        filteredRecipes = searchOneStr("main", filteredRecipes, str);
+    if (splittedStr?.length > 0) {
+      for (let i = 0; i < splittedStr.length; i++) {
+        filteredRecipes = searchOneStr("main", filteredRecipes, splittedStr[i]);
       }
       return filteredRecipes;
     } else return [];
-  }
-  //------------- filters ---------------------
-  else {
+    //------------- filters ---------------------
+  } else {
     const tags = getSplittedTagNames(type);
     if (tags.length > 0) {
-      for (let str of tags) {
-        filteredRecipes = searchOneStr(type, filteredRecipes, str);
+      for (let i = 0; i < tags.length; i++) {
+        filteredRecipes = searchOneStr(type, filteredRecipes, tags[i]);
       }
       return filteredRecipes;
     } else return [];
@@ -213,7 +230,6 @@ function axeEvents(type) {
   // }
 }
 //////////////////////////////////////////////////
-
 
 export {
   updateSearchValue,
